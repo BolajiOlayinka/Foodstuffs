@@ -1,38 +1,65 @@
-.App {
+:root{
+  --mainGreen:#039445;
+  --mainOrange:#FC6914;
+  --mainBrown:#737373;
+  --lightBrown:#999;
+  --mainRed:#ED0612;
+  --mainPink:#dc3545;
+  --mainYellow:#ffc107;
+  --lightGreen:#8bc34a;
+  --lightBlue:#03a9f4;
+  --mainBlack: #000;
+  --mainWhite:#fff;
+  --mainAsh:#eaeaea;
+  
+}
+
+body{
+  font-family: 'Lora', serif!important;
+  background:var(--mainWhite)!important;
+  color:var(--mainBlack)!important;
+}
+
+.text-title{
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing:0.3rem;
+
+}
+.underline {
   text-align: center;
+  margin: 0 auto;
+  width: 20%;
+  position: relative;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.underline b {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background: #039445;
+  margin-bottom: 3px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.line {
+  text-align: center;
+  margin: 0 auto;
+  width: 20%;
+  position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+b, strong {
+  font-weight: bolder;
 }
-
-.App-link {
-  color: #61dafb;
+.underline b.line {
+  width: 80%;
+  margin: 0 auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.underline span i {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border: 2px solid #039445;
+  -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
+  /* -moz-transform: rotate(45deg) translate3d(0, 0, 0);
+  -ms-transform: rotate(45deg) translate3d(0, 0, 0);
+  -o-transform: rotate(45deg) translate3d(0, 0, 0); */
+  transform: rotate(45deg) translate3d(0, 0, 0);
+  margin-left: 0.7em;
 }
