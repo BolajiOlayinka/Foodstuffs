@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import Product from "./Product";
 import Title from './Title';
 import {ProductConsumer} from '../Context';
+import Slider from './Slider';
 export default class ProductList extends Component {
     render() { 
         return (
             <React.Fragment>
+            <Slider/>
                 <div className="py-5">
                     <div className="container">
                     <Title className="font-weight-bold" name="Our" title=" Products"/>

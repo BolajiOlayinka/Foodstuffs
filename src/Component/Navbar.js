@@ -36,7 +36,7 @@ const Header = props => {
               </Item>
               <Item>
                 <StyledLink to="/store" className="nav-Link">
-                  Products
+                  Store
                 </StyledLink>
               </Item>
               <Item>

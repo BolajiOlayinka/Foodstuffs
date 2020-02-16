@@ -4,6 +4,7 @@ import HomeProduct from './HomeProduct';
 import Title from './Title';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
+import Testimonial from './Testimonial';
 
 export default class Home extends Component {
     render() {
@@ -19,6 +20,8 @@ export default class Home extends Component {
                             </StoreButton>
                             </Link>
                 </div>
+                <Title name="Client " title="Testimonial"/>
+                <Testimonial/>
             </div>
         )
     }

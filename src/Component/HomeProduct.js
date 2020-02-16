@@ -12,7 +12,7 @@ export default class HomeProduct extends Component {
                        <div className="row">
                         <ProductConsumer>
                             {value => {                               
-                                 return value.products.slice(0,4).map( product => {
+                                 return value.products.slice(0,8).map( product => {
                                      return <Product key={product.id} product ={product}/>;
                                  })
                             }}
