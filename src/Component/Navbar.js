@@ -8,7 +8,7 @@ import {
   
 } from "reactstrap";
 import { Link } from "react-router-dom";
-import logo from "../logo-white-sm.png";
+// import logo from "../logo-white-sm.png";
 import styled from "styled-components";
 
 const Header = props => {
@@ -21,7 +21,8 @@ const Header = props => {
       <NavWrapper>
         <Navbar color="light" light expand="md" className="mb-0">
           <BrandLink to="/">
-            <img src={logo} alt="store" className="navbar-brand" />
+          <h2>AgroCenter</h2>
+            {/* <img src={logo} alt="store" className="navbar-brand" /> */}
           </BrandLink>
 
           <NavbarToggler onClick={toggle} />

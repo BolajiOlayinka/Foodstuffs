@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {ProductConsumer} from "../Context";
 import {Link} from 'react-router-dom';
 import {ButtonContainer} from './Button';
+import styled from 'styled-components';
 
 
 export default class Details extends Component {
@@ -26,13 +27,14 @@ export default class Details extends Component {
                             <img src={img} className="img-fluid" alt="product"/>
                         </div>
                         {/* Product Text */}
-                        <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                            <h2> Title:{title}</h2>
+                        <DetailsArea className="col-10 mx-auto col-md-6 my-3 text-capitalize">
+                            <h2 className="text-bold"> Title:{title}</h2>
                             <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                                 made by:<span className="text-uppercase">{company}</span>
                             </h4>
-                            <h4 className="text-blue"><strong> price: <span>$</span>{price}</strong></h4>
-                            <p className ="text-capitalize font-weight-bold mt-3 mb-0">some info about product:<span className="text-muted">{info}</span></p>
+                            <h4 className="text-blue"><strong> price: <span>₦</span>{price}</strong></h4>
+                            <p className ="text-capitalize font-weight-bold mt-3 mb-0">Some Info About Product:<Info>{info}</Info></p>
+                            <div className="text-center">
                             <Link to ='/store'>
                             <ButtonContainer>
                                 back to products
@@ -45,10 +47,10 @@ export default class Details extends Component {
                             }}>
                                {inCart ? "inCart": "Add to Cart"} 
                             </ButtonContainer>
-
+                            </div>
                             
                             
-                        </div>
+                        </DetailsArea>
                         {/* End ProdUCT Text */}
                      </div>
                     {/* End Product Info */}
@@ -62,3 +64,18 @@ export default class Details extends Component {
         )
     }
 }
+
+const DetailsArea = styled.div `
+line-height: 3em;
+letter-spacing:0.1em;
+font-family:"Lora", "San-serif";
+text-align:justify;
+
+`;
+
+const Info = styled.p `
+font-size:14px;
+font-weight:bold;
+width:80%;
+margin:auto;
+`
