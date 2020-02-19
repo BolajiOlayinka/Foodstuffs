@@ -30,9 +30,6 @@ export default class Slider extends Component {
             <img src="img/slide5.png" alt="person" />
           </div>
           <div className="item">
-            <img src="img/gall2.png" alt="person" />
-          </div>
-          <div className="item">
             <img src="img/slide6.png" alt="person" />
           </div>
           

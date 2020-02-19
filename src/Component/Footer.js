@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../logo-white-sm.png';
-import {ButtonContainer} from './Button';
+// import {ButtonContainer} from './Button';
 import styled from 'styled-components';
 
 export default class Footer extends Component {
     render() {
         return (
-            <FooterWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 text-center">
+            <FooterWrapper>
             {/* <div className="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
             
                 <div className="col-lg-3 col-md-3 col-sm-10 col-xs-10">
@@ -36,7 +36,7 @@ export default class Footer extends Component {
                     <p>Email Address:</p>
                 </div>
             </div> */}
-            <div className="container-fluid text-center d-none d-lg-block pt-5">
+            <div className="container-fluid text-center d-none d-lg-block pt-5" >
             <div className="row">
                 <div className="col-10 mx-auto col-lg-3">
                 <Link to ="/">
@@ -74,7 +74,11 @@ export default class Footer extends Component {
     }
 }
 const FooterWrapper = styled.nav `
-background:var(--mainBlue);
+
+background:var(--mainGreen);
+.navbar{
+    margin-bottom:0px!important;
+}
 .nav-Link{
     color:var(--mainWhite)!important;
     font-size:1.3rem;

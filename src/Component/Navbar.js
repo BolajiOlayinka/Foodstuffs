@@ -1,15 +1,9 @@
 import React, { useState } from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
- 
- 
-  
-} from "reactstrap";
+import { Collapse, Navbar, NavbarToggler } from "reactstrap";
 import { Link } from "react-router-dom";
 // import logo from "../logo-white-sm.png";
 import styled from "styled-components";
+import Search from './Search';
 
 const Header = props => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,15 +13,17 @@ const Header = props => {
   return (
     <div>
       <NavWrapper>
-        <Navbar color="light" light expand="md" className="mb-0">
+      <Contain className="container">
+        <Navbar light expand="md" className="mb-0">
+
           <BrandLink to="/">
-          <h2>AgroCenter</h2>
+            <h2>AgroCenter</h2>
             {/* <img src={logo} alt="store" className="navbar-brand" /> */}
           </BrandLink>
 
           <NavbarToggler onClick={toggle} />
 
-          <Contain className="container">
+          
             <Collapse isOpen={isOpen} navbar>
               <Item>
                 <StyledLink to="/" className="nav-Link">
@@ -46,26 +42,19 @@ const Header = props => {
               </Item>
             </Collapse>
 
-            <Form class="searchBox">
-              <Input
-                type="text"
-                placeholder="Search For Products"
-                name="search"
-              ></Input>
-              <SearchButton type="submit">
-                <i class="fa fa-search"></i>
-              </SearchButton>
-            </Form>
-          </Contain>
+           <Search/>
           <CartLink to="/cart" className="myCart">
             <CartBody>
               <CartText className="ml-2 mr-2">
                 <i className="fas fa-cart-plus"></i>
               </CartText>
-              Cart
+              Cart  <span> (0)</span>
             </CartBody>
+            
           </CartLink>
+          
         </Navbar>
+        </Contain>
       </NavWrapper>
     </div>
   );
@@ -73,11 +62,19 @@ const Header = props => {
 export default Header;
 
 const NavWrapper = styled.div`
-  background-color: var(--mainGreen)!important;
-  margin:0px;
+
+  margin: 0px;
+  padding-top:1em!important;
+  padding-bottom:1em!important;
+ 
+  
 `;
 const BrandLink = styled(Link)`
-  margin-left: 2em;
+ color:black;
+
+ &:hover{
+   text-decoration:none;
+ }
   margin-right: 2em;
 
   @media (max-width: 425px) {
@@ -95,7 +92,7 @@ const StyledLink = styled(Link)`
   margin-right: 0.5em;
   vertical-align: middle;
   display: flex;
-  padding: 1em 4em;
+  padding: 1em 3em;
 
   &:hover {
     text-decoration: none !important;
@@ -103,19 +100,25 @@ const StyledLink = styled(Link)`
     background-color: var(--mainGreen);
     color: var(--mainWhite) !important;
   }
-  @media (max-width: 1024px) {
+  @media (min-width: 1024px) {
+    display:none;
     padding: 1em 1em;
+  }
+  @media (min-width: 768px) {
+    display:none;
+    padding: 1em 0.5em;
   }
   @media (max-width: 425px) {
     padding: 1em 4em;
+    display:none;
   }
   @media (max-width: 375px) {
     padding: 1em 2em;
+    displa:none;
   }
 `;
 const Contain = styled.div`
-  padding-left: 3em;
-  padding-right: 3em;
+ 
 
   @media (max-width: 768px) {
     padding-left: 1em;
@@ -129,10 +132,10 @@ const Item = styled.li`
 const CartLink = styled(Link)`
   float: right;
   margin-left: auto;
-  margin-right: 2em;
   font-size: 1.5em;
+  font-weight:bold;
 
-  color: var(--mainPink);
+  color: var(--mainBlack);
 
   &:hover {
     color: var(--mainGreen);
@@ -155,76 +158,4 @@ const CartText = styled.span`
 const CartBody = styled.span`
   display: flex;
   align-items: center;
-`;
-const Form = styled.form`
-  width: 50%;
-  @media (max-width: 768px) {
-    width:45%;
-  }
-  @media (max-width: 425px) {
-    margin-top: -5em;
-    margin-left: auto;
-    margin-right: 8em;
-  }
-  @media (max-width: 375px) {
-    width: 50%;
-    margin-right: 9em;
-  }
-  @media (max-width: 320px) {
-    width: 40%;
-  }
-`;
-const Input = styled.input`  
-     padding: 1em;
-     font-size: 1.2em;
-     border: 1px solid var(--mainPink);
-     float:left;
-     width: 80%;
-     border-radius:1em 0em 0em 1em;
-
-     background: #f1f1f1;
-
-     ::placeholder{
-     text-align:center;
-     color:var(--mainPink)
-     }
-     @media (max-width:768px){
-         width:70%;
-     }
-     @media (max-width:320px){
-        font-size: 1em;
-     }
-     
-
-  }
-`;
-
-const SearchButton = styled.button`
-  width: 10%;
-  padding: 8.5px 8px;
-  background: var(--mainGreen);
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-  border-radius: 0em 1em 1em 0;
-  :hover {
-    background: var(--mainPink);
-  }
-  @media (max-width: 768px) {
-    width: 15%;
-    padding: 8.5px 1px;
-  }
-  @media (max-width: 375px) {
-    width: 20%;
-  }
-  @media (max-width: 320px) {
-    font-size: 12px;
-  }
-  ::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
 `;

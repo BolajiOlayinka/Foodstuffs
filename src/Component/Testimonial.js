@@ -43,8 +43,8 @@ export default function Testimonial() {
         color: purple;
         }
         `}>
-            <h2>{current.quote}</h2>
-            <h2>{current.client}</h2>
+            <h4>{current.quote}</h4>
+            <h4>{current.client}</h4>
             <div className={css `
             display:flex;
 
@@ -62,7 +62,7 @@ export default function Testimonial() {
                 content: "";
                 height:6px;
                 width:6px;
-                background-color:#222;
+                background-color:var(--mainGreen);
                 border-radius:50%;
                 transition:background-color 0.3s ease;
             }
