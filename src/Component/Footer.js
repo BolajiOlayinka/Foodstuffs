@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../logo-white-sm.png';
+import logo from '../Afrimakt-Logo.png';
 // import {ButtonContainer} from './Button';
 import styled from 'styled-components';
 
@@ -42,8 +42,7 @@ export default class Footer extends Component {
                 <Link to ="/">
                         <img src={logo} alt="store" className="navbar-brand"/>
                     </Link>
-                    <p className="text-left">Artify is an online art gallery that deals in sales 
-                    of artwork within and outside the country</p> 
+                    <p className="text-left">AfriMakt is an agro food company that deals wth freight of local food products. Deals in 100% fresh foods/commodities, no additive/organic</p> 
                 </div>
                 <div className="col-10 mx-auto col-lg-3">
                     <p>Site Map</p>
