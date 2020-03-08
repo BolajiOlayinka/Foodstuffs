@@ -1,23 +1,22 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
-export default function SearchBox(searchfield, onchange) {
-    return (
-        <React.Fragment>
-         <Form class="searchBox">
-              <Input
-                type="text"
-                placeholder="Search For Products"
-                name="search"
-                onChange={onchange}
-              ></Input>
-              <SearchButton type="submit">
-                <i class="fa fa-search"></i>
-              </SearchButton>
-            </Form>
-            
-        </React.Fragment>
-    )
+export default function SearchBox( {onchange}) {
+  return (
+    <React.Fragment>
+      <Form className="searchBox">
+        <Input
+          type="text"
+          placeholder="Search For Products"
+          name="search"
+          onChange={onchange}
+        ></Input>
+        <SearchButton type="submit">
+          <i className="fa fa-search"></i>
+        </SearchButton>
+      </Form>
+    </React.Fragment>
+  );
 }
 const Form = styled.form`
   width: 100%;
@@ -63,13 +62,13 @@ const Input = styled.input`
 const SearchButton = styled.button`
   width: 10%;
   padding: 8.5px 8px;
-  background: var(--mainGreen);
+  background: var(--mainBlue);
   color: white;
   font-size: 17px;
   border: 1px solid grey;
   border-left: none;
   cursor: pointer;
- 
+
   :hover {
     background: var(--mainPink);
   }

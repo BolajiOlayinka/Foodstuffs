@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function subNavbar() {
   return (
     <div>
-      <Wrapper>
+      <Wrappersub>
         <div className="container">
           <ul id="menu-top-right" className="nav nav-inline pull-left">
             <li >
@@ -43,13 +43,13 @@ export default function subNavbar() {
             
           </ul>{" "}
         </div>
-      </Wrapper>
+      </Wrappersub>
     </div>
   );
 }
 
-const Wrapper = styled.div`
-  background-color: var(--mainGreen);
+const Wrappersub = styled.div`
+  background-color: var(--mainBlue);
   padding-top: 1em;
   padding-bottom: 1em;
   border-bottom: 1px solid #ddd;

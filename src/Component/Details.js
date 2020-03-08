@@ -3,19 +3,24 @@ import {ProductConsumer} from "../Context";
 import {Link} from 'react-router-dom';
 import {ButtonContainer} from './Button';
 import styled from 'styled-components';
+import SubNav from './subNavbar'
 
 
 export default class Details extends Component {
     render() {
         return (
+            
             <ProductConsumer>
                 {value => {
                const {id, company, img, info, price, title, inCart}=
                value.detailsProduct;
                return (
+                   <React.Fragment>
+                <SubNav/>
                 <div className="container py-5">
                     {/* Title */}
                     <div className="row">
+                    
                         <div className="col-10 mx-auto text-center text-slanted text-blue my-5">
                             <h1>{title}</h1>
                         </div>
@@ -37,10 +42,10 @@ export default class Details extends Component {
                             <div className="text-center">
                             <Link to ='/store'>
                             <ButtonContainer>
-                                back to products
+                                Back to Store
                             </ButtonContainer>
                             </Link>
-                            <ButtonContainer cart disableed={inCart? true:false}
+                            <ButtonContainer cart disabled={inCart? true:false}
                             onClick={()=>{
                                 value.addToCart(id);
                                 value.openModal(id);
@@ -55,6 +60,7 @@ export default class Details extends Component {
                      </div>
                     {/* End Product Info */}
                 </div>
+                </React.Fragment>
                )
                 }}
                

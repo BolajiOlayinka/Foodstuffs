@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {homestoreProducts, storeProducts, detailsProduct} from './data';
+import {storeProducts, detailsProduct} from './data';
 
 const ProductContext =React.createContext();
 //Provider
@@ -15,6 +15,7 @@ const ProductContext =React.createContext();
          cartSubtotal:0,
          cartTax:0,
          cartTotal:0,
+         count:0,
      };
      componentDidMount(){
         //  this.setHomeProducts();
@@ -28,7 +29,7 @@ const ProductContext =React.createContext();
 
          })
          this.setState(()=>{
-            console.log(tempProducts)
+            // console.log(tempProducts)
              return {products:tempProducts};
              
          })
@@ -92,6 +93,17 @@ const ProductContext =React.createContext();
 
        this.setState(()=>{return{cart:[...tempCart]}}, ()=>{this.addTotals()})
    }
+//    myCount=(id)=>{
+//     let tempCart = [...this.state.cart];
+//     const selectedProduct =tempCart.find(item=>item.id === id)
+
+//     const index=tempCart.indexOf(selectedProduct);
+//     const product = tempCart[index];
+//     product.count = product.count + 1;
+//     // product.total = product.price * product.count;
+
+//     this.setState(()=>{return{cart:[...tempCart]}}, ()=>{this.addTotals()})
+// }
    decrement=(id)=>{
         let tempCart = [...this.state.cart];
        const selectedProduct =tempCart.find(item=>item.id === id)
@@ -162,6 +174,7 @@ addTotals=()=>{
                decrement:this.decrement,
                removeItem:this.removeItem,
                clearCart:this.clearCart,
+               myCount:this.myCount,
                }}>
                {this.props.children}
            </ProductContext.Provider>

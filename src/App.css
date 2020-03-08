@@ -5,9 +5,9 @@
   --lightBrown:#999;
   --mainRed:#ED0612;
   --mainPink:#dc3545;
-  --mainYellow:#ffc107;
+  --mainYellow:#ffc922;
   --lightGreen:#8bc34a;
-  --lightBlue:#03a9f4;
+  --mainBlue:#252850;
   --mainBlack: #000;
   --mainWhite:#fff;
   --mainAsh:#eaeaea;
@@ -49,4 +49,10 @@ body{
 }
 .float-left{
   float:left!important;
+}
+.navbar-toggler-icon{
+  display:none!important;
+}
+.navbar-toggler{
+  display:none;
 }

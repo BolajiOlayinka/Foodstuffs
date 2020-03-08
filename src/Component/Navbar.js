@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Collapse, Navbar, NavbarToggler } from "reactstrap";
 import { Link } from "react-router-dom";
-// import logo from "../logo-white-sm.png";
+import logo from "../Afrimakt-Logo.png";
 import styled from "styled-components";
 import Search from './Search';
 
@@ -9,6 +9,7 @@ const Header = props => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+  
 
   return (
     <div>
@@ -17,29 +18,29 @@ const Header = props => {
         <Navbar light expand="md" className="mb-0">
 
           <BrandLink to="/">
-            <h2>AgroCenter</h2>
-            {/* <img src={logo} alt="store" className="navbar-brand" /> */}
+          
+            <img src={logo} alt="store" className="navbar-brand" />
           </BrandLink>
 
           <NavbarToggler onClick={toggle} />
 
           
             <Collapse isOpen={isOpen} navbar>
-              <Item>
-                <StyledLink to="/" className="nav-Link">
+              <ItemNav>
+                <StyledLinkNav to="/" className="nav-Link">
                   Home
-                </StyledLink>
-              </Item>
-              <Item>
-                <StyledLink to="/store" className="nav-Link">
+                </StyledLinkNav>
+              </ItemNav>
+              <ItemNav>
+                <StyledLinkNav to="/store" className="nav-Link">
                   Store
-                </StyledLink>
-              </Item>
-              <Item>
-                <StyledLink to="/about" className="nav-Link">
+                </StyledLinkNav>
+              </ItemNav>
+              <ItemNav>
+                <StyledLinkNav to="/about" className="nav-Link">
                   About us
-                </StyledLink>
-              </Item>
+                </StyledLinkNav>
+              </ItemNav>
             </Collapse>
 
            <Search/>
@@ -84,7 +85,7 @@ const BrandLink = styled(Link)`
     margin-left: 0em;
   }
 `;
-const StyledLink = styled(Link)`
+const StyledLinkNav = styled(Link)`
   color: var(--mainPink) !important;
   font-size: 1.3rem;
   text-transform: capitalize !important;
@@ -97,7 +98,7 @@ const StyledLink = styled(Link)`
   &:hover {
     text-decoration: none !important;
     cursor: pointer;
-    background-color: var(--mainGreen);
+    background-color: var(--mainBlue);
     color: var(--mainWhite) !important;
   }
   @media (min-width: 1024px) {
@@ -125,7 +126,7 @@ const Contain = styled.div`
     padding-right: 1em;
   }
 `;
-const Item = styled.li`
+const ItemNav = styled.li`
   display: flex;
 `;
 
@@ -138,7 +139,7 @@ const CartLink = styled(Link)`
   color: var(--mainBlack);
 
   &:hover {
-    color: var(--mainGreen);
+    color: var(--mainBlue);
     text-decoration: none !important;
     cursor: pointer;
   }

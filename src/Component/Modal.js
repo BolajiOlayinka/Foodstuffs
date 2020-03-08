@@ -19,13 +19,13 @@ export default class Modal extends Component {
                      <div className="container">
                          <div className="row">
                              <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-5">
-                                 <h5>item added to the cart</h5>
+                                 <h5 className="py-2 bold">item added to the cart</h5>
                                  <img src={img} className="img-fluid" alt="product"/>
-                                 <h5>{title}</h5>
-                                 <h5 className="text-muted"> price : # {price}</h5>
+                                 <h5 className="py-1 bold">{title}</h5>
+                                 <h5 className="text-muted py-1"> price : # {price}</h5>
                                  <Link to ='/store'>
                                      <ButtonContainer onClick={()=> closeModal()}>
-                                       Store
+                                       Continue Shopping
                                      </ButtonContainer>
                                  </Link>
                                  <Link to ='/cart'>
@@ -60,3 +60,6 @@ justify-content: center;
     background:var(--mainWhite);
 }
 `
+// const ModalHeading =styled.h5``
+// margin-bottom:0.5em
+// `

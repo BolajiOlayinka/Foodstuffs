@@ -36,7 +36,7 @@ export default class Footer extends Component {
                     <p>Email Address:</p>
                 </div>
             </div> */}
-            <div className="container-fluid text-center d-none d-lg-block pt-5" >
+            <div className="container text-center d-none d-lg-block pt-5" >
             <div className="row">
                 <div className="col-10 mx-auto col-lg-3">
                 <Link to ="/">
@@ -75,9 +75,12 @@ export default class Footer extends Component {
 }
 const FooterWrapper = styled.nav `
 
-background:var(--mainGreen);
+background:var(--mainBlue);
+padding-top:5em!important;
+    padding-bottom:5em!important;
 .navbar{
     margin-bottom:0px!important;
+    
 }
 .nav-Link{
     color:var(--mainWhite)!important;
@@ -89,6 +92,8 @@ p{
     font-size:1rem;
     width:100%;
     text-align:justify;
+    margin-top:1em;
+    mrgpin-bottom:1em;
     
 }
 `

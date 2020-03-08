@@ -47,7 +47,7 @@ const Category = (props) => {
   const Wrapper= styled.div `
   display:flex;
   justify-content:space-between;
-  background-color:var(--mainGreen);
+  background-color:var(--mainBlue);
   color:white;
   padding-top:1em;
   padding-bottom:0.5em;

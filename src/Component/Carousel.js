@@ -36,9 +36,11 @@ export default Carousel;
 const Wrapper =styled.div `
 .carousel-inner{
   z-index:0;
+  
 }
 .carousel-item{
   z-index:0;
+  
 }
 .carousel-item .active{
   z-index:0;
